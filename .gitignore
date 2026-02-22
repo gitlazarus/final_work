@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+
+# Docker
+*.log
+
+# Data
+data/russian_houses.csv   
+data/*.parquet            
+
+# Airflow
+logs/
+plugins/__pycache__/
+
+# IDE
+.vscode/
+.idea/
