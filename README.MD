@@ -41,7 +41,7 @@ Final_work_v2/
 
 Клонируйте репозиторий:
 ```
-git clone <>
+git clone <https://github.com/gitlazarus/final_work.git>
 cd Final_work_v2
 ```
 Поднимите все контейнеры:
