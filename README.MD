@@ -111,3 +111,9 @@ house_id,latitude,longitude,maintenance_year,square,population,region,locality_n
 
 Полный CSV доступен по ссылке:
 [Скачать CSV](https://disk.yandex.ru/d/HfALdldItWKhig)
+
+Обратная связь: 
+```
+tg: @tmplnameforfeedback
+```
+
