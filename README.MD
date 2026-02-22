@@ -79,7 +79,7 @@ docker-compose up -d
 4. ClickHouse 23+ (контейнер)
 5. PostgreSQL 15+ (контейнер, проверка подключения)
 ```
-## Срез данных (первые 50 строк)
+## Срез данных (первые 25 строк)
 
 ```csv
 house_id,latitude,longitude,maintenance_year,square,population,region,locality_name,address,full_address,communal_service_id,description
