@@ -136,8 +136,31 @@ def connect_clickhouse(**kwargs):
     server_version = client.command("SELECT version()")
     print(f"ClickHouse connected, version: {server_version}")
 
-    server_version = client.command("SELECT version()")
-    print(f"ClickHouse connected, version: {server_version}")
+    client.command("""
+        CREATE TABLE IF NOT EXISTS russian_houses
+        (
+            house_id UInt64,
+            latitude Float64,
+            longitude Float64,
+            maintenance_year UInt16,
+            square Float64,
+            population UInt32,
+            region String,
+            locality_name String,
+            address String,
+            full_address String,
+            communal_service_id UInt64,
+            description String
+        )
+        ENGINE = MergeTree()
+        ORDER BY house_id
+    """)
+
+    print("Table russian_houses is ready.")
+
+    client.command("TRUNCATE TABLE russian_houses")
+
+    print("Table russian_houses truncated.")
 
 
 def load_to_clickhouse(**kwargs):
