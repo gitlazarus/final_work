@@ -54,6 +54,12 @@ def load_and_clean(**kwargs):
         F.col("description")
     )
 
+    df_transformed = df_transformed.filter(
+        (F.col("maintenance_year").isNotNull()) &
+        (F.col("maintenance_year") >= 1800) &
+        (F.col("maintenance_year") <= 2025)
+    )
+
     print(f"После очистки: {df_transformed.count()}")
 
     df_transformed.write.mode("overwrite").parquet("/opt/airflow/data/clean_data")
