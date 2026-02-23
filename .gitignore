@@ -11,7 +11,8 @@ __pycache__/
 
 # Data
 data/russian_houses.csv   
-data/*.parquet            
+data/*.parquet
+data/clean_data/            
 
 # Airflow
 logs/
